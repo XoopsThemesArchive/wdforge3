@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
+<META http-equiv="Page-Exit" content="blendTrans(Duration=0.1)"> 
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="WDForge with xoops" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.gif" rel="SHORTCUT ICON" />
+<style type="text/css">
+<!--
+@import url("<{$xoops_imageurl}>style.css");
+@import url("<{$xoops_imageurl}>menu.css");
+@import url("<{$xoops_url}>/xoops.css");
+-->
+</style>
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--<{$xoops_js}>-->
+</script>
+<script language="JavaScript" src="<{$xoops_imageurl}>wdforge3.js"></script>
+</head>
+<body>
+
+</style>
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript"><!--<{$xoops_js}>--></script>
+<script language="JavaScript" type="text/javascript" src="<{$xoops_imageurl}>/wdforge3.js"></script>
+</head>
+<body>
+<div id="Global"> 
+  <div id="header">
+    <div id="headerbanner">
+    <{$xoops_banner}>		
+    </div>
+    <p class="right"><{$xoops_pagetitle}><br><script type="text/javascript">DateduJour();</script></p>
+  </div>
+  <div id="nav"><{include file="wdforge3/menu.html"}></div>
+  <div id="Blocs">
+	<table cellspacing="0">
+    	<tr>
+      	<{if $xoops_showlblock == 1}>
+	<td id="leftcolumn" >
+        <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <div class="blockTitle"><{$block.title}></div>
+	  <div class="blockContent"><{$block.content}></div>
+	  <br>
+        <{/foreach}>
+	</td>
+	<{/if}>
+
+	<td id="centercolumn">
+	<{if $xoops_showcblock == 1}>
+		<table cellspacing="0">
+		<tr>
+			<td id="centerCcolumn" colspan="2">
+			<{counter start=0 print=false}>
+			<{foreach item=block from=$xoops_ccblocks}>
+			<{counter print=false assign=count}>
+			<{if $count<=2}>
+			<div style="padding: 1px;">
+			  <fieldset>
+			    <legend class="blockTitle"><{$block.title}></legend>
+			    <div class="blockContent"><{$block.content}></div>
+			  </fieldset>
+			</div>
+			<{/if}>
+			<{/foreach}>
+			</td>
+		</tr><tr>
+			<td id="centerLcolumn">
+			<{foreach item=block from=$xoops_clblocks}>
+			<div style="padding: 0px 0px 0px 1px;"> 
+			  <fieldset>
+			    <legend class="blockTitle"><{$block.title}></legend>
+			    <div class="blockContent"><{$block.content}></div>
+			  </fieldset>
+			</div>
+			<{/foreach}>
+			</td>
+			<td id="centerRcolumn">
+			<{foreach item=block from=$xoops_crblocks}>
+			<div style="padding: 0px 1px 0px 0px;">
+			  <fieldset>
+			    <legend class="blockTitle"><{$block.title}></legend>
+			    <div class="blockContent"><{$block.content}></div>
+			  </fieldset>
+			</div>
+			<{/foreach}>
+			</td>
+		</tr><tr>
+			<td id="centerCcolumn" colspan="2">
+			<{counter start=0 print=false}>
+			<{foreach item=block from=$xoops_ccblocks}>
+			<{counter print=false assign=count}>
+			<{if $count>2}>
+			<div style="padding: 1px;">
+			  <fieldset>
+			    <legend class="blockTitle"><{$block.title}></legend>
+			    <div class="blockContent"><{$block.content}></div>
+			  </fieldset>
+			</div>
+			<{/if}>
+			<{/foreach}>
+			</td>
+		</tr>
+		</table>
+	<{/if}>
+	<div id="content">
+	<{$xoops_contents}>
+	</div>
+	<a href="#">Haut de page</a>
+	</td>
+	<{if $xoops_showrblock == 1}>
+	<td id="rightcolumn">
+	<{foreach item=block from=$xoops_rblocks}>
+	  <div class="blockTitle"><{$block.title}></div>
+	  <div class="blockContent"><{$block.content}></div>
+	<{/foreach}>
+	</td>
+	<{/if}>
+    	</tr>
+  	</table>
+	<div id="XFooter">
+	<{$xoops_footer}>&nbsp;<a href="http://www.xoops.org"><img src="<{$xoops_imageurl}>xoops.gif" alt="<{$xoops_version}>" /></a>
+	</div>
+   </div>
+</div>
+</body>
+</html>

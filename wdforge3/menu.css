@@ -1,0 +1,85 @@
+/* menu */
+#container {
+	width: 100%;
+	background-color: #6699cc;
+	text-align: left;
+	height: 21px; 
+}
+/* niveau1*/
+#nav, #nav ul {
+	clear:both;
+	width: 100%;
+	background-color: #6699cc;
+	float: left;
+	list-style-type: none;
+	font-weight: bold;
+	/*aligné à gauche*/
+	padding: 0 0 0 0;
+	margin:0;
+}
+#nav a {
+	display: block;
+	width: 130px;
+	color: white;
+	text-decoration: none;	
+	text-align: center;
+/*	padding: 0px 0px 2px;*/
+	padding: 0;
+}
+#nav a.daddy {
+/*	background: url(rightarrow2.gif) center right no-repeat; */
+}
+#nav li {
+	list-style-type: none;
+	float: left;
+	padding: 0; 
+	width: 130px;
+	/*aligné à gauche*/
+	padding:0;
+	margin-left:0;
+}
+/* niveau2*/
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 130px;
+	font-weight: normal;
+	margin:0;
+	/*aligné à gauche*/
+	padding: 0 0 0 0;
+	margin-left:0;
+	margin-right:0;
+}
+#nav li li {
+	list-style-type: none;
+	width: 129px;
+	/*aligné à gauche*/
+	padding: 0 0 0 0;
+	margin-left:0;
+}
+#nav li ul a {
+	width: 129px;
+	text-align:left;
+}
+/* niveau3*/
+/*décalage gauche et remontée*/
+#nav li ul ul {
+	margin: -14px 0 0 129px; 
+}
+/*position 'invisible'*/
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li.sfhover ul ul, #nav li.sfhover ul ul ul {
+	left: -999em;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul {
+	left: auto;
+}
+#nav li:hover, #nav li.sfhover {
+	background: #99CCFF; 
+}
+#nav li:hover ul, #nav li.sfhover ul {
+	/*padding-right : 2px; */
+}
+
+
+.clear{clear:both;}
